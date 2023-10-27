@@ -1,0 +1,102 @@
+
+  <div class="bg-primary py-5 rounded mat-toolbar mat-primary">
+      <h4 style="text-align: -webkit-center;">Emisión de Notas de Coberturas</h4>
+  </div>
+
+  <div class="container mt-n1" style=" margin-top: -1.5rem;">
+    <div class="row container justify-content-center">
+        <mat-card class="example-card">
+          <mat-card-content>
+            <div class="row">
+              <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Cedentes</mat-label>
+                  <input type="text"
+                        placeholder="Seleccionar Cedentes"
+                        aria-label="Cedentes"
+                        matInput
+                        [formControl]="cedentsControl"
+                        [matAutocomplete]="cedentsAuto">
+                  <mat-autocomplete #cedentsAuto="matAutocomplete" (optionSelected)="onCedentsSelection($event)">
+                    <mat-option *ngFor="let cedent of filteredCedents | async" [value]="cedent">
+                      {{ cedent }}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+              <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Asegurados</mat-label>
+                  <input type="text"
+                        placeholder="Seleccionar Asegurado"
+                        aria-label="Asegurado"
+                        matInput
+                        [formControl]="insuredControl"
+                        [matAutocomplete]="insuredAuto">
+                  <mat-autocomplete #insuredAuto="matAutocomplete" (optionSelected)="onInsuredSelection($event)">
+                    <mat-option *ngFor="let insured of filteredInsured | async" [value]="insured">
+                      {{ insured }}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+              <div class="col-md-3">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Ramos</mat-label>
+                  <input type="text"
+                        placeholder="Seleccionar Ramo"
+                        aria-label="Ramo"
+                        matInput
+                        [formControl]="tradeControl"
+                        [matAutocomplete]="tradeAuto">
+                  <mat-autocomplete #tradeAuto="matAutocomplete" (optionSelected)="onTradeSelection($event)">
+                    <mat-option *ngFor="let trade of filteredTrade | async" [value]="trade">
+                      {{ trade }}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Monedas</mat-label>
+                      <input type="text"
+                            placeholder="Seleccionar Monedas"
+                            aria-label="Monedas"
+                            matInput
+                            [formControl]="coinsControl"
+                            [matAutocomplete]="coinsAuto">
+                      <mat-autocomplete #coinsAuto="matAutocomplete" (optionSelected)="onCoinsSelection($event)">
+                        <mat-option *ngFor="let coins of filteredCoins | async" [value]="coins">
+                          {{ coins }}
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                  </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-md-3">
+                  <mat-form-field class="example-full-width">
+                      <mat-label>First name</mat-label>
+                      <input matInput>
+                    </mat-form-field>
+              </div>
+              <div class="col-md-2">
+                  <mat-form-field class="example-full-width">
+                      <mat-label>First name</mat-label>
+                      <input matInput>
+                    </mat-form-field>
+              </div>
+      
+            </div>
+
+          </mat-card-content>
+        </mat-card>
+    </div>
+  </div>
+
+ 
+
+

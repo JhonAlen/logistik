@@ -1,0 +1,45 @@
+<div class="blank-layout-container justify-content-center align-items-center">
+  <div class="position-relative row w-100 h-100 bg-gredient justify-content-center">
+    <div class="page-header align-items-start min-vh-100" style="background-image: url('../../../../assets/images/backgrounds/Fondo.png');width: 100%;" loading="lazy">
+    
+      <div class="container">
+        <div class="screen">
+          <div class="screen__content">
+            <div style="display: grid;place-items: center;">
+              <a class="image d-flex align-items-center">
+                <img src="../../../../assets/images/logos/logistika.png" style="margin-top: 40px;">
+              </a>
+            </div>
+            <form class="login" [formGroup]="SingIn">
+              <div class="login__field">
+                <i class="login__icon fas fa-user"></i>
+                <input type="text" class="login__input" formControlName="xlogin" placeholder="Login">
+              </div>
+              <div class="login__field">
+                <i class="login__icon fas fa-lock"></i>
+                <input type="password" class="login__input" formControlName="xclave" placeholder="Contraseña">
+              </div>
+              <button class="button login__submit">
+                <span class="button__text" (click)="onSubmit()">Iniciar Sesión</span>
+                <i class="button__icon fas fa-chevron-right"></i>
+              </button>				
+            </form>
+          </div>
+          <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape4"></span>
+            <span class="screen__background__shape screen__background__shape3"></span>		
+            <span class="screen__background__shape screen__background__shape2"></span>
+            <span class="screen__background__shape screen__background__shape1"></span>
+          </div>		
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
